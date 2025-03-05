@@ -1,0 +1,176 @@
+.mainContainer {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 2rem 0;
+}
+
+.contentContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.infoCard {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.villanoNombre {
+  font-family: "Creepster", cursive;
+  font-size: 3rem;
+  color: #ff0000;
+  text-shadow: 3px 3px 5px #000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 3px 3px 5px #000;
+  }
+  50% {
+    text-shadow: 3px 3px 15px #ff0000;
+  }
+  100% {
+    text-shadow: 3px 3px 5px #000;
+  }
+}
+
+.infoSection {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.infoSection p {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.8rem;
+}
+
+.infoSection p:last-child {
+  border-bottom: none;
+}
+
+.infoSection strong {
+  color: #ff0000;
+  margin-right: 0.5rem;
+}
+
+.comentariosSection {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  font-family: "Creepster", cursive;
+  font-size: 2.5rem;
+  color: #ff0000;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  border-color: #ff0000;
+  color: #ff0000;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+.loadingContainer,
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.villanoImageDetalle {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  height: auto;
+}
+
+.loadingContainer p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.errorContainer h2 {
+  color: #ff0000;
+  margin-bottom: 1rem;
+}
+
+.errorContainer p {
+  margin-bottom: 2rem;
+}
+
+.deleteButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.deleteButton {
+  background-color: #ff0000;
+  border-color: #cc0000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .villanoNombre {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .infoSection {
+    font-size: 1rem;
+  }
+
+  .deleteButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .deleteButton span {
+    display: none;
+  }
+}

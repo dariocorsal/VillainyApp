@@ -1,0 +1,139 @@
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5vh;
+}
+
+.title {
+  font-family: "Creepster", cursive;
+  font-size: 5rem;
+  color: #ff0000;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 5px #000;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 3px 3px 5px #000;
+  }
+  50% {
+    text-shadow: 3px 3px 15px #ff0000;
+  }
+  100% {
+    text-shadow: 3px 3px 5px #000;
+  }
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15vh;
+  padding: 0 15px;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.inputGroup {
+  display: flex;
+  width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.dropdownResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  margin-top: 5px;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.noResults {
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.resultsContainer {
+  margin-top: 3rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.searchContainer :global(.dropdown-toggle) {
+  border-radius: 0 5px 5px 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.searchContainer :global(.dropdown-toggle:hover) {
+  background-color: #cc0000 !important;
+}
+
+.searchContainer :global(.dropdown-menu) {
+  min-width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.searchContainer :global(.dropdown-item) {
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.searchContainer :global(.dropdown-item:hover) {
+  background-color: #ff0000;
+}
+
+.searchContainer :global(.dropdown-item.active) {
+  background-color: #cc0000;
+}
